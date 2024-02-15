@@ -9,4 +9,5 @@ locals {
     env        = var.env
     managed_by = "terraform"
   }
+  
 }
