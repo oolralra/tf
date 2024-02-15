@@ -1,7 +1,13 @@
 variable "eks_cluster_name" {
   type        = string
   description = "EKS cluster's name"
-  default     = "my-cluster"
+  default     = "tc"
+}
+
+variable "account_arn" {
+  type        = string
+  description = "IAM user account like arn:aws:iam::176381617529:user/oolralra"
+  default     = "arn:aws:iam::176381617529:user/oolralra"
 }
 
 variable "cidr_block" {
@@ -82,7 +88,7 @@ variable "single_nat_gateway" {
 variable "enable_nat_private" {
   type        = bool
   description = "Flag to enable or disable NAT gateway in private subnet"
-  default     = false
+  default     = true
 }
 
 variable "enable_nat_database" {
